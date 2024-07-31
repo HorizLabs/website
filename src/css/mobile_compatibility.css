@@ -1,0 +1,7 @@
+/* For main.css */
+
+@media screen and (max-width: 768px) {
+    .introduction_header * {
+        margin-left: 10px;
+    }
+}
