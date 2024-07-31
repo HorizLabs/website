@@ -10,15 +10,16 @@ export default function Home() {
           <p>Horizon Labs is a organization that follows and expands upon these principles.</p>
           <Link href={'/about'} className='bg-[#A599B5] rounded-md p-2 text-white'>Learn More</Link>
         </div>
-        <div className='horizon_platform bg-[#ACBDBA] text-[#051014]
+        <div className='horizon_platform bg-[#CDDDDD] text-[#051014]
         min-h-52 flex p-5
-        flex-row gap-5'>
-          <div className='bg-black'>
-            <h1 className='font-semibold text-[30px]'>Introducing Horizon</h1>
-            <p className='w-[50%]'>Horizon is an all new platform that we are developing which utilizes NextJS and other software</p>
+        lg:flex-rowgap-5'>
+          <div className='flex flex-col gap-4'>
+            <h1 className='font-semibold text-[30px]'>Introducing the Horizon Platform</h1>
+            <p className='w-[300px]'>Horizon is an all new platform that we are developing to be able to allow individuals to do their best and make it easier on creators in testing.</p>
+            <Link href={'/about'} className='bg-[#A599B5] rounded-md p-2 w-fit text-white'>Learn More</Link>
           </div>
           <div>
-           <iframe width="560" className='rounded-md' height="315" src={VIDEO_ID} title="Video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+           <iframe width="560" className='rounded-md frame_video' height="315" src={`${VIDEO_ID}?autoplay=1&mute=1`} title="Video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
           </div>
         </div>
     </main>

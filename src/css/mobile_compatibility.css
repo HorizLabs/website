@@ -4,4 +4,16 @@
     .introduction_header * {
         margin-left: 10px;
     }
+    .horizon_platform {
+        flex-direction: column;
+        gap: 2em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .horizon_platform .frame_video {
+        width: 360px;
+        height: 250px;
+        margin: auto;
+    }
 }
