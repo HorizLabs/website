@@ -1,9 +1,8 @@
 /* Mobile compatibility is a separate file */
 
 .about_content {
-    justify-content: center;
-    flex-direction: column;
-    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
     padding-left: 1.5em;
 }
 
@@ -47,4 +46,8 @@
 .core_story .content {
     display: flex;
     flex-direction: column;
+}
+
+.principles {
+    align-items: center;
 }
