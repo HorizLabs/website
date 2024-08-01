@@ -23,8 +23,8 @@ export function FooterComponent() {
                     </div>
                 </div>
             </footer>
-            <footer className="bg-black flex justify-center gap-3 font-extralight">
-                <h1>©{new Date().getFullYear()} Horizon Labs</h1>
+            <footer className="bg-black flex justify-center gap-3 font-extralight text-[15px] p-1">
+                <h1>©{new Date().getFullYear()} Horizon Labs. All Rights Reserved</h1>
                 {/* <p>●</p>
                 <Link href={'/legal'} className="hover:underline">Legal</Link> */}
             </footer>
