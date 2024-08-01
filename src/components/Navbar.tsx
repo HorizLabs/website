@@ -11,7 +11,7 @@ export function NavbarComponent() {
             <div className={'navbar_header'}>
                 {/* Logo and Name as header */}
                 <Image src={'/logo.png'} width={50} height={50} alt='Horizon Logo' />
-                <h1>Horizon Labs</h1>
+                <h1 className='text-black dark:text-white'>Horizon Labs</h1>
             </div>
         </nav>
     )

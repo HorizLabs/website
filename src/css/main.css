@@ -21,3 +21,14 @@
     align-items: center;
     justify-content: center;
 }
+
+
+@media screen and (prefers-color-scheme: light) {
+    .introduction_header {
+        background-color: rgb(238, 238, 238);
+    }
+    .navbar_header h1 {
+        color: #000000;
+    }
+    
+}

@@ -16,8 +16,6 @@
 .about_background {
     align-items: center;
     justify-content: space-between;
-    padding-left: 10em;
-    padding-right: 10em;
 }
 
 .join {
@@ -25,10 +23,28 @@
 }
 
 .join_card {
-    background-color: #2E2F2F;
-    width: 50%;
     min-height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 15px;
+}
+
+.form_input {
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form_input label {
+    margin-left: 0.5em;
+}
+
+.core_story {
+    display: flex;
+    align-items: center;
+}
+
+.core_story .content {
+    display: flex;
+    flex-direction: column;
 }

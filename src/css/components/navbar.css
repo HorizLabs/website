@@ -20,3 +20,13 @@
     font-weight: 700;
     color: #ffffff;
 }
+
+@media screen and (prefers-color-scheme: light) {
+    .navbar {
+        background-color: rgb(238, 238, 238);
+    }
+    .navbar_header h1 {
+        color: #000000;
+    }
+    
+}
