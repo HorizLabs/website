@@ -22,10 +22,11 @@ export function FooterComponent() {
                     </div>
                 </div>
                 <div className="flex mr-5">
-                    <div className="flex flex-col content-center text-center">
-                        <p className="font-bold">Links</p>
+                    <div className="flex flex-col content-center text-start">
+                        <p className="font-bold">Home</p>
                         <ul>
                             <li><Link className="hover:underline" href={'/about'}>About</Link></li>
+                            <li><Link className="hover:underline" href={'/contact'}>Contact</Link></li>
                         </ul>
                     </div>
                 </div>

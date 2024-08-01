@@ -1,0 +1,13 @@
+.core_asic {
+    align-items: center;
+}
+
+.email_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corpo {
+    align-items: start;
+}
