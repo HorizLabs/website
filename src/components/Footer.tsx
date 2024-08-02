@@ -21,12 +21,18 @@ export function FooterComponent() {
                         <Link href={'https://www.linkedin.com/company/horizlabs'}><RiLinkedinBoxFill size={30} /></Link>
                     </div>
                 </div>
-                <div className="flex mr-5">
+                <div className="flex mr-5 gap-5">
                     <div className="flex flex-col content-center text-start">
                         <p className="font-bold">Home</p>
                         <ul>
                             <li><Link className="hover:underline" href={'/about'}>About</Link></li>
                             <li><Link className="hover:underline" href={'/contact'}>Contact</Link></li>
+                        </ul>
+                    </div>
+                    <div className="flex flex-col content-center text-start">
+                        <p className="font-bold">Projects</p>
+                        <ul>
+                            <li><Link className="hover:underline" href={'/products/horizon'}>Horizon</Link></li>
                         </ul>
                     </div>
                 </div>
