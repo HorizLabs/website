@@ -16,11 +16,11 @@ export default function Home() {
           <div className='flex flex-col gap-4'>
             <h1 className='font-semibold text-[30px]'>Introducing the Horizon Platform</h1>
             <p className='w-[300px]'>Horizon is an all new platform that we are developing to be able to allow individuals to do their best and make it easier on creators in testing.</p>
-            <Link href={'/about'} className='bg-[#A599B5] rounded-md p-2 w-fit text-white'>Learn More</Link>
+            <Link href={'/products/horizon'} className='bg-[#A599B5] rounded-md p-2 w-fit text-white'>Learn More</Link>
           </div>
-          <div>
+          {/* <div>
            <iframe width="560" className='rounded-md frame_video w-[400px] sm:w-[560px]' height="315" src={`${VIDEO_ID}?autoplay=1&mute=1`} title="Video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-          </div>
+          </div> */}
         </div>
     </main>
   );
