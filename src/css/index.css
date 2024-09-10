@@ -1,0 +1,12 @@
+.tagline {
+    animation: show forwards 750ms;
+}
+
+@keyframes show {
+    from {
+        transform: translateX(-200%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
