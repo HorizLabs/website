@@ -1,12 +1,22 @@
 .tagline {
-    animation: show forwards 750ms;
+    animation: show forwards 990ms;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-@keyframes show {
+/* @keyframes show {
     from {
         transform: translateX(-200%);
     }
     to {
         transform: translateX(0%);
     }
+} */
+
+.front {
+    display: flex;
+    flex-direction: column;
+    min-height: 75vh;
+    justify-content: center;
 }

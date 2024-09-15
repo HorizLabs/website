@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit';
+    gap: 1.5em;
+}
+
+.footer_left {
+    flex-direction: column;
+    grid-area: 0.1em;
+}

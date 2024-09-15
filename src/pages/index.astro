@@ -2,6 +2,7 @@
 import '../css/main.css'
 import '../css/index.css'
 import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
 ---
 
 <html lang="en">
@@ -13,9 +14,12 @@ import Navbar from '../components/Navbar.astro'
 		<title>Horizon Labs</title>
 	</head>
 	<body>
-		<Navbar />
-		<div class="tagline">
-			<h1>Innovate, Educate, Elevate</h1>
+		<Navbar classes="dark:bg-[#3b3b3b] bg-[white] w-[100%]" />
+		<div class="front dark:bg-[#3b3b3b] bg-[white]">
+			<div class="flex md:w-[60%] ml-4 tagline text-black dark:text-white flex-col gap-1">
+				<h1 class="lg:text-[4em] text-[2.6em] sm:text-[3.5em] font-bold">Empowering students to <span class="bg-gradient-to-br from-purple-600 to-blue-500 rounded-md pl-4 pr-4">succeed</span> through research and competitions.</h1>
+			</div>
 		</div>
+		<Footer />
 	</body>
 </html>

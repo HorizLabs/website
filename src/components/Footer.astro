@@ -1,0 +1,27 @@
+---
+import '../css/main.css'
+import '../css/components/footer.css'
+import DiscordLogoFill from 'phosphor-astro/DiscordLogoFill.astro'
+---
+
+<html lang="en">
+	<body>
+        <footer class="footer dark:bg-[#1c1b1b] bg-[#e0e0e0] min-h-[20vh]">
+            <div class="footer_left text-black dark:text-white flex flex-row">
+                <div class="flex gap-2">
+                    <img src="/logo.png" width="75" height="75" />
+                </div>
+                <ul>
+                    <!-- <li><a ><DiscordLogoFill class={'w-[40px] h-[40px]'} /></a></li> -->
+                </ul>
+            </div>
+            <div class="flex">
+                <ul class="flex flex-col dark:text-white text-dark">
+                    <p><strong>Company</strong></p>
+                    <li>Organization</li>
+                    <li>Legal</li>
+                </ul>
+            </div>
+        </footer>
+	</body>
+</html>
