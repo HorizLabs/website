@@ -3,7 +3,8 @@ import '../css/main.css'
 import '../css/index.css'
 import Navbar from '../components/Navbar.astro'
 import Footer from '../components/Footer.astro'
-import {TrustedOrganizations} from "../components/TrustedOrganizations.tsx"
+// import {TrustedOrganizations} from "../components/TrustedOrganizations.tsx"
+// import {Research} from "../components/Research.tsx"
 ---
 
 <html lang="en">
@@ -21,7 +22,11 @@ import {TrustedOrganizations} from "../components/TrustedOrganizations.tsx"
 				<h1 class="lg:text-[4em] text-[2.6em] sm:text-[3.5em] font-bold">Empowering students to <span class="bg-gradient-to-br from-purple-600 to-blue-500 rounded-md pl-4 pr-4 text-white">succeed</span> through research and competitions.</h1>
 			</div>
 		</div>
-		<TrustedOrganizations client:load />
+		<div class="font-[Outfit] bg-gradient-to-tr from-green-800 to-green-500 text-black dark:text-white p-5 justify-center align-middle flex flex-col w-[100%]">
+			<h1 class="text-[45px] font-[600] lg:w-[65%]">Building tools, programs, and research that <u class="font-black">matter</u>.</h1>
+			<p class="text-[17px] w-[75%]">Ever since our founding, we have been building tools that empower organizations and conduct research and do programs for students to be able to do their best.</p>
+		</div>
+		<!-- <TrustedOrganizations client:load /> -->
 		<Footer />
 	</body>
 </html>
