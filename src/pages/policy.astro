@@ -1,0 +1,31 @@
+---
+import '../css/main.css'
+import '../css/index.css'
+import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
+// import {TrustedOrganizations} from "../components/TrustedOrganizations.tsx"
+// import {Research} from "../components/Research.tsx"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Horizon Labs</title>
+	</head>
+	<body>
+		<Navbar classes="dark:bg-[#3b3b3b] bg-[white] w-[100%]" />
+		<div class="front dark:bg-[#3b3b3b] bg-[white]">
+			<div class="flex md:w-[60%] ml-4 tagline text-black dark:text-white flex-col gap-1">
+				<h1 class="lg:text-[4em] text-[2.6em] sm:text-[3.5em] font-bold">Policies.</h1>
+				<p>The place where matters and documents concerning organizational policies and more information is compiled and accessible to everyone.</p>
+			</div>
+		</div>
+		<div class="flex justify-center p-10">
+			<h1 class="font-extrabold text-[30px]">No policies are currently available, please check back soon!</h1>
+		</div>
+		<Footer />
+	</body>
+</html>
