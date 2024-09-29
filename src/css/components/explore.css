@@ -1,0 +1,22 @@
+.explore-sys {
+    align-items: center;
+}
+
+.explore-row {
+    display: grid;
+    gap: 5vw;
+    min-width: 25vw;
+    max-width: 100vw;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.card {
+    width: fit-content;
+    padding: 10px;
+    min-height: 30vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

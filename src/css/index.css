@@ -20,3 +20,8 @@
     min-height: 75vh;
     justify-content: center;
 }
+
+.about_tagline {
+    background: rgb(5,75,20);
+    background: linear-gradient(3rad, rgb(37, 42, 115) 0%, rgb(77, 110, 167) 100%); 
+}
