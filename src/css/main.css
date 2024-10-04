@@ -6,3 +6,7 @@
     font-family: "Outfit";
     src: url('/fonts/Outfit.ttf') format('truetype');
 }
+@font-face {
+    font-family: "SourceCodePro";
+    src: url('/fonts/SourceCodePro.ttf') format('truetype');
+}
