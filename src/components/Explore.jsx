@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Diamond, Code, Rocket, Flask, GlobeHemisphereEast, Lightbulb } from "@phosphor-icons/react";
+import { ArrowRight, Diamond, Code, Rocket, Flask, GlobeHemisphereEast, Lightbulb, AppWindow, Trophy, MagnifyingGlass } from "@phosphor-icons/react";
 import { Link } from 'react-scroll';
-import {Zap, Cpu } from 'lucide-react';
 
 
 export function Explore() {
@@ -16,18 +15,17 @@ export function Explore() {
 
     return (    
         <div className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen flex flex-col">
-            <SponsorBar />
+            {/* <SponsorBar /> */}
             <About />
             <Divisions />
-            <News />
-            <Services />
+            {/* <News />
+            <Services /> */}
         </div>
     );
 }
 
 function SponsorBar() {
     const icons = [
-        <Code size={48} />,
         <Diamond size={48} />,
         <Rocket size={48} />,
         <Flask size={48} />,
@@ -37,7 +35,7 @@ function SponsorBar() {
 
     return (
         <div className="bg-blue-800">
-            <h2 className="text-3xl font-bold text-center pt-6 mb-6 text-white bg-gradient-to-b from-blue-700 to-blue-800">Sponsors</h2>
+            <h2 className="text-3xl font-bold text-center pt-6 mb-6 text-white bg-gradient-to-b from-blue-700 to-blue-800">Sponsored by</h2>
             <div className="relative overflow-hidden h-16 bg-blue-800">
                 <div className="flex animate-scroll">
                     {icons.map((icon, index) => (
@@ -76,13 +74,13 @@ function About() {
                     className="max-w-3xl mx-auto text-center mb-12"
                 >
                     <p className="text-xl mb-6">
-                        Horizon Labs is a parent company to multiple non-profit organizations, united in our mission to empower individuals through computer science and research.
+                        Horizon Labs is an organization that conducts initiatives that falls within our mission of empowering the next generation of scientists and programmers to succeed through research, competitions, and software.
                     </p>
                     <p className="text-lg mb-6">
-                        Our flagship project, "Horizon," is an open-source platform designed to revolutionize test management and administration. It enables individuals and organizations to efficiently manage and take tests, fostering a new era of accessible and streamlined assessment processes.
+                        STEM are a group of fields that has recently not been given a lot of interest by younger generations, especially within science, which is why Horizon Labs was created to be able to empower these individuals through the development & shipping of software; conducting and publishing scientific research; and conducting competitions for the success of these individuals.
                     </p>
                     <p className="text-lg">
-                        At Horizon Labs, we believe in the power of open collaboration. All our projects, including the Horizon platform, are open-source, inviting developers and enthusiasts worldwide to contribute, innovate, and shape the future of educational technology.
+                        At Horizon, we believe in the principles of Open Source Software. Our primary projects are shipped open-source, allowing for developers and enthusiasts to contribute, innovate, and shape the future of technology.
                     </p>
                 </motion.div>
                 
@@ -95,17 +93,17 @@ function About() {
                     <FeatureCard 
                         icon={<Code size={40} />}
                         title="Open-Source Innovation"
-                        description="We develop cutting-edge, open-source software solutions for testing and assessment."
+                        description="We develop cutting-edge, open-source software solutions for organizations, competitions, and more."
                     />
                     <FeatureCard 
                         icon={<Flask size={40} />}
                         title="Research & Development"
-                        description="Our team conducts groundbreaking research to advance educational technology."
+                        description="Our team conducts scientific research to be able to advance current knowledge seen within science."
                     />
                     <FeatureCard 
                         icon={<Rocket size={40} />}
                         title="Community Empowerment"
-                        description="We foster a global community of developers and educators to drive innovation."
+                        description="We foster a global community of individuals to drive innovation, especially within STEM and beyond."
                     />
                 </motion.div>
             </div>
@@ -135,20 +133,20 @@ function Divisions() {
                     Explore our Divisions
                     <Diamond className="ml-2 w-8 h-8 text-blue-600 dark:text-blue-400" />
                 </h2>
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-3 gap-8 justify-center items-center">
                     <DivisionCard 
                         title="Software"
-                        icon={<Code size={40} />}
+                        icon={<AppWindow size={40} />}
                         link="/software"
                     />
-                    <DivisionCard 
-                        title="IRPO"
-                        icon={<GlobeHemisphereEast size={40} />}
+                    {/* <DivisionCard 
+                        title="Competitions"
+                        icon={<Trophy size={40} />}
                         link="/irpo"
-                    />
+                    /> */}
                     <DivisionCard 
                         title="Research"
-                        icon={<Lightbulb size={40} />}
+                        icon={<MagnifyingGlass size={40} />}
                         link="/research"
                     />
                 </div>
@@ -200,8 +198,6 @@ function Services() {
         { icon: <Flask />, name: "Data Science", description: "Insights from your data" },
         { icon: <GlobeHemisphereEast />, name: "Cloud Services", description: "Scalable cloud solutions" },
         { icon: <Lightbulb />, name: "Consulting", description: "Expert tech guidance" },
-        { icon: <Zap />, name: "DevOps", description: "Streamlined development operations" },
-        { icon: <Cpu />, name: "AI Solutions", description: "Intelligent automated systems" }
     ];
 
     return (
