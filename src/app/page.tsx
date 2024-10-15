@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import {motion, AnimatePresence} from "framer-motion";
+import {motion} from "framer-motion";
 import { getCookie, setCookie } from "cookies-next";
 
 export default function Home() {
