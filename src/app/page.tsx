@@ -4,16 +4,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import {motion, AnimatePresence} from "framer-motion";
+import { getCookie, setCookie } from "cookies-next";
 
 export default function Home() {
   // Fancy loading screen
   const [loadingStatus, setLoadingStatus] = useState(true);
   useEffect(() => {
     setTimeout(async () => {
-      if ((await (await fetch('/api')).json()).apiVersion == '1.0.0B') {
+      if (getCookie('platformVersion') == undefined) {
+        setCookie('platformVersion', (await (await fetch('/api')).json()).apiVersion)
+        setLoadingStatus(false)
+      } else {
         setLoadingStatus(false)
       }
-    }, 2000)
+    }, 0)
   },[])
   
   // Value
@@ -35,13 +39,13 @@ export default function Home() {
               <h1 className="text-4xl md:text-6xl font-black mb-8">
               Empowering students to succeed through research and competitions.
               </h1>
-                <a href="#about" className="bg-white text-blue-600 py-3 px-8 rounded-full text-lg font-semibold hover:bg-blue-100 transition duration-300">
-                  Learn more
+                <a  className="bg-gray-300 text-blue-600 py-3 px-8 rounded-full text-lg font-semibold hover:bg-blue-100 transition duration-300 select-none">
+                  Coming Soon
                 </a>
               </div>
             </section>
             <section  className="bg-gradient-to-b from-blue-700 to-blue-800 min-h-[30vh]">
-              <h1>From one Network, to the next</h1>
+              {/* <h1>From one Network, to the next</h1> */}
             </section>
           </div>
         </main>

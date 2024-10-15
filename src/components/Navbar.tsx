@@ -9,10 +9,10 @@ export default function Navbar() {
                     <Image src={'/HorizonLabsLogo.png'} alt="Horizon Labs Logo" width={50} height={50} />
                     <h1 className="font-black md:text-[35px] text-[21px] transition-all">Horizon Labs</h1>
                 </div>
-                <ul className="flex flex-row items-center gap-4">
+                {/* <ul className="flex flex-row items-center gap-4">
                     <li><Link href={'/software'}>Software</Link></li>
                     <li><Link href={'/#about'}>About</Link></li>
-                </ul>
+                </ul> */}
             </div>
         </nav>
     )
