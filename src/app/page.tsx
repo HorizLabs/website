@@ -40,7 +40,7 @@ export default function Home() {
               <h1 className="text-4xl md:text-6xl font-black mb-8">
               Empowering students to succeed through research and competitions.
               </h1>
-                <a  className="bg-gray-400 text-blue-600 py-3 px-8 rounded-full text-lg font-semibold hover:bg-blue-100 transition duration-300 select-none">
+                <a  className="bg-gray-100 text-blue-800 py-3 px-8 rounded-full text-lg font-semibold hover:bg-blue-100 transition duration-300 select-none">
                   Coming Soon
                 </a>
               </div>
