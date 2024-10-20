@@ -7,7 +7,7 @@ import {motion} from "framer-motion";
 import { getCookie, setCookie } from "cookies-next";
 import Footer from "@/components/Footer";
 
-export default function Home() {
+export default function PolicyPage() {
   // Fancy loading screen
   const [loadingStatus, setLoadingStatus] = useState(true);
   useEffect(() => {
@@ -31,22 +31,23 @@ export default function Home() {
         <motion.main initial={{opacity: 0}}
         animate={{opacity: loadingStatus ? 0 : 1}}
         transition={{duration: 1}}
-        className="bg-blue-700 text-white"
-        > 
-        <main className={`bg-blue-700 text-white ${loadingStatus ? 'hidden' : 'visible'} transition-all`}>
+        className="bg-green-700 text-white"
+        >
+        <main className={`bg-green-700 text-white ${loadingStatus ? 'hidden' : 'visible'} transition-all`}>
           <Navbar />
           <div>
-          <section className="hero min-h-screen flex items-center justify-center bg-gradient-to-b text-white"> <div className="container mx-auto px-6 text-left">
+          <section className="hero min-h-[50vh] flex items-center justify-center bg-gradient-to-b text-white"> <div className="container mx-auto px-6 text-left">
               <h1 className="text-4xl md:text-6xl font-black mb-8">
-              Empowering students to succeed through research and competitions.
+              Organization Policies
               </h1>
-                <a  className="bg-gray-400 text-blue-600 py-3 px-8 rounded-full text-lg font-semibold hover:bg-blue-100 transition duration-300 select-none">
-                  Coming Soon
-                </a>
               </div>
             </section>
-            <section  className="bg-gradient-to-b from-blue-700 to-blue-800 min-h-[30vh]">
-              {/* <h1>From one Network, to the next</h1> */}
+            <section className="bg-gradient-to-b from-green-700 to-green-800 min-h-[30vh]">
+              <h1 className="flex justify-center font-semibold">Read the documents that governs all of Horizon Labs and our duties, here.</h1>
+              <ul className="list-none flex justify-center flex-col items-center">
+                <li><Link href={'/documents/Bylaws.pdf'} className="text-[#F5F5F5] hover:underline">Organization Bylaws</Link></li>
+                <li><Link href={'/documents/Conflict of Interest Policy.pdf'} className="text-[#F5F5F5] hover:underline">Conflict of Interest Policy</Link></li>
+              </ul>
             </section>
           </div>
         </main>
