@@ -45,7 +45,7 @@ export default function PolicyPage() {
             <section className="bg-gradient-to-b from-green-700 to-green-800 min-h-[30vh]">
               <h1 className="flex justify-center font-semibold">Read the documents that governs all of Horizon Labs and our duties, here.</h1>
               <ul className="list-none flex justify-center flex-col items-center">
-                <li><Link href={'/documents/Bylaws.pdf'} className="text-[#F5F5F5] hover:underline">Organization Bylaws</Link></li>
+                {/* <li><Link href={'/documents/Bylaws.pdf'} className="text-[#F5F5F5] hover:underline">Organization Bylaws</Link></li> */}
                 <li><Link href={'/documents/Conflict of Interest Policy.pdf'} className="text-[#F5F5F5] hover:underline">Conflict of Interest Policy</Link></li>
               </ul>
             </section>
