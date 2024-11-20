@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import {motion} from "framer-motion";
 import { getCookie, setCookie } from "cookies-next";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function Home() {
   // Fancy loading screen
@@ -45,7 +46,9 @@ export default function Home() {
                 </a>
               </div>
             </section>
-            <section  className="bg-gradient-to-b from-blue-700 to-blue-800 min-h-[30vh]">
+            <section  className="bg-gradient-to-b from-blue-700 to-blue-800 min-h-[30vh] flex justify-center gap-2">
+              <h1 className="font-black">Questions?</h1>
+              <h1>Email Dheeraj Chintapalli at <Link href={'mailto://dheeraj.c@irpo.net'} className="text-slate-100 underline">dheeraj.c@irpo.net</Link></h1>
               {/* <h1>From one Network, to the next</h1> */}
             </section>
           </div>
