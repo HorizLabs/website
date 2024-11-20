@@ -11,6 +11,7 @@ export default function Footer() {
                         <Image src={'/HorizonLabsLogo.png'} alt="Horizon Labs Logo" width={50} height={50} />
                         <h1 className="font-black md:text-[35px] text-[21px] transition-all">Horizon Labs</h1>
                     </div>
+                    <h1>Email: <Link href={'mailto://dheeraj.c@irpo.net'} className="text-blue-100">dheeraj.c@irpo.net</Link></h1>
                     {/* <p>Join the Horizon Network!</p> */}
                 </div>
                 <div className="links p-3">
