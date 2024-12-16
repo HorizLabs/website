@@ -46,9 +46,7 @@ export default function Home() {
                 </a>
               </div>
             </section>
-            <section  className="bg-gradient-to-b from-blue-700 to-blue-800 min-h-[30vh] flex justify-center gap-2">
-              <h1 className="font-black">Questions?</h1>
-              <h1>Email Dheeraj Chintapalli at <Link href={'mailto://dheeraj.c@irpo.net'} className="text-slate-100 underline">dheeraj.c@irpo.net</Link></h1>
+            <section  className="bg-gradient-to-b from-blue-700 to-blue-800 min-h-[30vh] flex justify-center">
               {/* <h1>From one Network, to the next</h1> */}
             </section>
           </div>
