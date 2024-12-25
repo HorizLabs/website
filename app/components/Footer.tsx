@@ -6,7 +6,7 @@ import Link from "next/link";
 export function Footer() {
     return (
         <div className="bg-inherit">
-            <footer className="flex flex-col gap-5 p-14 min-h-[30vh] justify-center items-center h-16 rounded-t-md dark:bg-zinc-800 bg-zinc-300">
+            <footer className="flex flex-col gap-5 p-14 min-h-[35vh] justify-center items-center h-16 rounded-t-md dark:bg-zinc-800 bg-zinc-300">
                 <div className="flex flex-col gap-4">
                     {/* Links */}
                     <div className="flex flex-row gap-10">
@@ -36,9 +36,11 @@ export function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-center items-center">
+                <div className="flex flex-col justify-center items-center">
                         <p className="text-xs text-gray-500 dark:text-gray-400 text-[14px]
                         ">©{new Date().getFullYear()} Horizon Labs, Inc. All rights reserved.</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400 text-[14px]
+                        ">EIN: 33-1547684</p>
                 </div>
             </footer>
         </div>
