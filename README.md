@@ -16,8 +16,8 @@ Next.js, TailwindCSS, TypeScript
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/horizon-labs-website.git
-   cd horizon-labs-website
+   git clone https://github.com/HorizLabs/website.git
+   cd website
   
 2. Install dependencies:
    
