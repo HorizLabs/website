@@ -15,7 +15,7 @@ const Research = () => {
             </span>
           </h1>
           <p className="flex items-center text-lg text-gray-300">
-            As a 501(c)(3) not-for-profit organization, Horizon Labs is dedicated to advancing educational technology through innovative research. Stay tuned for upcoming projects and initiatives.
+            As a 501(c)(3) not-for-profit organization, Horizon Labs is also dedicated to advancing developments in the sciences for the benefit of the public through our research.
           </p>
         </div>
       </section>
@@ -29,7 +29,7 @@ const Research = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-300">
-            We are currently developing our research initiatives to bring you cutting-edge solutions in educational technology. Stay connected with us for updates and announcements.
+            We are currently developing our research initiatives. Stay connected to learn more.
           </p>
         </div>
       </section>

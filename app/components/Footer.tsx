@@ -6,7 +6,7 @@ import Link from "next/link";
 export function Footer() {
     return (
         <div className="bg-inherit">
-            <footer className="flex flex-col gap-5 p-14 min-h-[35vh] justify-center items-center h-16 rounded-t-md dark:bg-zinc-800 bg-zinc-300">
+            <footer className="flex flex-col gap-5 p-14 min-h-[45vh] justify-center items-center h-16 rounded-t-md dark:bg-zinc-800 bg-zinc-300">
                 <div className="flex flex-col gap-4">
                     {/* Links */}
                     <div className="flex flex-row gap-10">
