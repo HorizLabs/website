@@ -49,7 +49,7 @@ const Solutions = () => {
         <div className="max-w-5xl">
           <h2 className="font-bold text-3xl mb-8">
             What We{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#62aec5] to-[#add2e4]">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#42b25e] to-[#17f64f]">
               Offer
             </span>
           </h2>
