@@ -1,43 +1,137 @@
-'use client';
+"use client";
 
-import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { ExternalLink, MenuIcon } from "lucide-react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
-export function Navbar() {
-    return (
-        <div className="flex justify-center items-center pt-5">
-            <nav className="dark:bg-zinc-800 bg-zinc-100 w-[90%] min-h-[6.5vh] flex pl-5 items-center gap-7 rounded-md shadow-md justify-between pr-5">
-                <Link href={'/'} className="flex flex-row items-center">
-                    <Image src="/Logo.png" alt="logo" width={50} height={50} />
-                </Link>
-                {/* Make menu in tialwind */}
-                <Menu as="div" className="relative">
-                    <MenuButton>
-                        <MenuIcon size={30} />
-                    </MenuButton>
-                    <MenuItems
-                        transition
-                        as="div"
-                        className="transition duration-100 ease-out data-[closed]:scale-95 data-[closed]:opacity-0 absolute right-0 top-10 bg-zinc-200 dark:bg-zinc-700 rounded-md shadow-lg w-[50vw] md:w-[35vw] lg:w-[25vw] p-8 z-10 flex flex-col gap-3"
-                    >
-                        <MenuItem as="div">
-                            <Link href={'/'}>Home</Link>
-                        </MenuItem>
-                        <MenuItem as="div">
-                            <Link href={'/about'}>About</Link>
-                        </MenuItem>
-                        <MenuItem as="div">
-                            <Link href={'https://irpo.net'} className="flex flex-row gap-2 items-center"><ExternalLink size={19.5} /> IRPO</Link>
-                        </MenuItem>
-                        <div className="my-1 h-px bg-white/5" />
-                        <MenuItem as="div" className={'flex flex-row gap-2 items-center justify-center'}>
-                            <Link href={'https://irpo.net'} className="bg-gray-300 hover:bg-gray-400 dark:bg-gray-600 hover:dark:bg-gray-800 transition-colors duration-200 p-3 pl-14 pr-14 rounded-md shadow-sm">Contact Us</Link>                    
-                        </MenuItem>
-                    </MenuItems>
-                </Menu>
-            </nav>
-        </div>
-    )
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Animate the whole navbar on mount
+  const navbarVariants = {
+    initial: { opacity: 0, y: -50 },
+    animate: { opacity: 1, y: 0 },
+  };
+
+  const islandVariants = {
+    initial: { scale: 0.9, opacity: 0 },
+    animate: { scale: 1, opacity: 1 },
+    hover: { scale: 1.03 },
+  };
+
+  const linkHover = {
+    hover: { scale: 1.1, color: "#60a5fa" },
+  };
+
+  const buttonHover = {
+    hover: {
+      scale: 1.05,
+      backgroundColor: "#1e40af",
+    },
+  };
+
+  return (
+    <AnimatePresence>
+      <motion.header
+        variants={navbarVariants}
+        initial="initial"
+        animate="animate"
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        // Match main page color; add slight transparency & blur when scrolled
+        style={{
+          backgroundColor: scrolled ? "rgba(14, 14, 14, 0.7)" : "#0e0e0e",
+          backdropFilter: scrolled ? "blur(6px)" : "none",
+          WebkitBackdropFilter: scrolled ? "blur(6px)" : "none",
+        }}
+        className="
+          fixed top-0 left-0 w-full z-50 
+          flex items-center justify-between 
+          h-20 px-6
+          shadow-md
+          transition-colors duration-300
+        "
+      >
+        {/* Left: Logo + Brand */}
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/Logo.png"
+            alt="Horizon Labs Logo"
+            width={50}
+            height={50}
+            className="object-contain"
+          />
+          <motion.span
+            className="text-white text-2xl font-semibold select-none"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
+          >
+            Horizon Labs
+          </motion.span>
+        </Link>
+
+        {/* Center: Detached “Island” */}
+        <motion.nav
+          variants={islandVariants}
+          initial="initial"
+          animate="animate"
+          whileHover="hover"
+          transition={{ duration: 0.4 }}
+          className="
+            flex items-center justify-center
+            p-4 px-6
+            gap-8
+            rounded-2xl 
+            bg-zinc-800/90 dark:bg-zinc-800/90
+            ring-1 ring-zinc-700
+            shadow-2xl
+            ml-[calc(10%-20rem)]
+          "
+        >
+          {[
+            { label: "IRPO", href: "https://irpo.net" },
+            { label: "Solutions", href: "/solutions" },
+            { label: "Research", href: "/research" },
+            { label: "About", href: "/about" },
+          ].map((link) => (
+            <motion.div
+              key={link.label}
+              variants={linkHover}
+              whileHover="hover"
+              className="text-center"
+            >
+              <Link className="text-white font-medium" href={link.href}>
+                {link.label}
+              </Link>
+            </motion.div>
+          ))}
+        </motion.nav>
+
+        {/* Right: Sign Up Button */}
+        <motion.div variants={buttonHover} whileHover="hover">
+          <Link
+            href="https://discord.gg/jCT5jbPJpM"
+            className="
+              bg-blue-600 text-white
+              font-semibold py-2 px-5 
+              rounded-md
+              shadow
+              transition-transform
+            "
+          >
+            Join Us
+          </Link>
+        </motion.div>
+      </motion.header>
+    </AnimatePresence>
+  );
 }

@@ -12,8 +12,11 @@ export function Footer() {
                     <div className="flex flex-row gap-10">
                         <ul className="flex flex-col gap-2 justify-center items-center text-[110%]">
                             <li className="text-xs font-semibold text-gray-700 dark:text-gray-300 text-[18.5px]">Company</li>
+                            <li className="text-xs text-gray-500 dark:text-gray-400 text-[15px]  hover:underline"><Link href={'/legal'} className="flex flex-row gap-1 items-center">Legal</Link></li>
+                            <li className="text-xs text-gray-500 dark:text-gray-400 text-[15px]  hover:underline"><Link href={'/solutions'} className="flex flex-row gap-1 items-center">Solutions</Link></li>
+                            <li className="text-xs text-gray-500 dark:text-gray-400 text-[15px]  hover:underline"><Link href={'/research'} className="flex flex-row gap-1 items-center">Research</Link></li>
                             <li className="text-xs text-gray-500 dark:text-gray-400 text-[15px]  hover:underline"><Link href={'/about'} className="flex flex-row gap-1 items-center">About</Link></li>
-                            <li className="text-xs text-gray-500 dark:text-gray-400 text-[15px]  hover:underline">Legal</li>
+                            <li className="text-xs text-gray-500 dark:text-gray-400 text-[15px]  hover:underline"><Link href={'https://docs.google.com/forms/d/e/1FAIpQLSebqY46sgDccd4a7HqpxzJo-rD-R7xacASmf3VdoyMxna1_fg/viewform'} className="flex flex-row gap-1 items-center">Careers</Link></li>
                         </ul>
                         <ul className="flex flex-col gap-2 items-center text-[110%]">
                             <li className="text-xs font-semibold text-gray-700 dark:text-gray-300 text-[18.5px]">Initiatives</li>
