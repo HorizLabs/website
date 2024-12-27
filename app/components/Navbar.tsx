@@ -119,7 +119,7 @@ export default function Navbar() {
         {/* Right: Sign Up Button */}
         <motion.div variants={buttonHover} whileHover="hover">
           <Link
-            href="https://discord.gg/jCT5jbPJpM"
+            href="https://discord.gg/HwxqRShWc9"
             className="
               bg-blue-600 text-white
               font-semibold py-2 px-5 
