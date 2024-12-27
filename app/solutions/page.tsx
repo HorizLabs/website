@@ -20,7 +20,6 @@ const Solutions = () => {
         "A robust, cloud-based platform designed to ensure fairness and integrity for remote Olympiad competitions. This solution is tailored to meet the unique challenges of large-scale academic testing environments.",
       status: "In Development",
     },
-    // Add more solutions here as they become available
   ];
 
   const openModal = (solution: Solution) => setSelectedSolution(solution);
@@ -50,7 +49,7 @@ const Solutions = () => {
         <div className="max-w-5xl">
           <h2 className="font-bold text-3xl mb-8">
             What We{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ff7e5f] to-[#feb47b]">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#62aec5] to-[#add2e4]">
               Offer
             </span>
           </h2>
